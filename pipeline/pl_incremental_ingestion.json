@@ -31,7 +31,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT @{activity('lkp_last_cdc').output.firstRow.cdc}",
+							"value": "@concat('SELECT ',activity('lkp_last_cdc').output.firstRow.cdc)",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
