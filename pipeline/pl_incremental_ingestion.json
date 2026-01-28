@@ -7,13 +7,13 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "lkp_last_cdc",
+						"activity": "current_timestamp",
 						"dependencyConditions": [
 							"Succeeded"
 						]
 					},
 					{
-						"activity": "current_timestamp",
+						"activity": "lkp_last_cdc",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -31,7 +31,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT *\nFROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}\nWHERE @{pipeline().parameters.cdc} > @{activity('lkp_last_cdc').output.firstRow.cdc}",
+							"value": "CONCAT('SELECT *\nFROM',' ',@{pipeline().parameters.schema}.@{pipeline().parameters.table},' WHERE',' ',@{pipeline().parameters.cdc},' > ', string(@{activity('lkp_last_cdc').output.firstRow.cdc}))",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
