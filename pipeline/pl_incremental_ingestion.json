@@ -232,7 +232,7 @@
 						{
 							"type": "Query",
 							"text": {
-								"value": "SELECT MAX(@{pipeline().parameters.cdc}) as cdc \nFROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}",
+								"value": "SELECT MAX(CAST(@{pipeline().parameters.cdc} AS datetime2)) as cdc \nFROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}",
 								"type": "Expression"
 							}
 						}
@@ -257,6 +257,9 @@
 				"type": "String"
 			},
 			"last_cdc": {
+				"type": "String"
+			},
+			"last_updated_cdc": {
 				"type": "String"
 			}
 		},
