@@ -31,7 +31,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT *\nFROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}\nWHERE DATEDIFF_BIG(SECOND,'1970-01-01T00:00:00', @{pipeline().parameters.cdc}) > DATEDIFF_BIG(SECOND,'1970-01-01T00:00:00', @{activity('lkp_last_cdc').output.firstRow.cdc})",
+							"value": "SELECT *\nFROM @{pipeline().parameters.schema}.@{pipeline().parameters.table}\nWHERE DATEDIFF_BIG(SECOND,'1970-01-01T00:00:00', @{pipeline().parameters.cdc}) > DATEDIFF_BIG(SECOND,'1970-01-01T00:00:00', CAST(@{activity('lkp_last_cdc').output.firstRow.cdc} AS datetime2))",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
