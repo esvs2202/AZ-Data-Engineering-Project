@@ -68,9 +68,12 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
-							"folder": "DimUser",
+							"folder": {
+								"value": "@pipeline().parameters.table",
+								"type": "Expression"
+							},
 							"file": {
-								"value": "@concat('DimUser','_',variables('current'),'.parquet')",
+								"value": "@concat(pipeline().parameters.table,'_',variables('current'),'.parquet')",
 								"type": "Expression"
 							}
 						}
