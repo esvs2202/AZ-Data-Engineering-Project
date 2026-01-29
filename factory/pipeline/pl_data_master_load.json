@@ -8,10 +8,6 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "[\n\t{\n\t\t\"schema\":\"dbo\",\n\t\t\"table\":\"DimUser\",\n\t\t\"cdc\":\"updated_at\",\n\t\t\"from_date\":\"\"\n\t},\n\t{\n\t\t\"schema\":\"dbo\",\n\t\t\"table\":\"DimTrack\",\n\t\t\"cdc\":\"updated_at\",\n\t\t\"from_date\":\"\"\n\t},\n\t{\n\t\t\"schema\":\"dbo\",\n\t\t\"table\":\"DimDate\",\n\t\t\"cdc\":\"date\",\n\t\t\"from_date\":\"\"\n\t},\n\t{\n\t\t\"schema\":\"dbo\",\n\t\t\"table\":\"DimArtist\",\n\t\t\"cdc\":\"updated_at\",\n\t\t\"from_date\":\"\"\n\t},\n\t{\n\t\t\"schema\":\"dbo\",\n\t\t\"table\":\"FactStream\",\n\t\t\"cdc\":\"stream_timestamp\",\n\t\t\"from_date\":\"\"\n\t}\n]",
-						"type": "Expression"
-					},
 					"isSequential": false,
 					"activities": [
 						{
@@ -34,6 +30,43 @@
 				}
 			}
 		],
+		"parameters": {
+			"loop_input": {
+				"type": "string",
+				"defaultValue": [
+					{
+						"schema": "dbo",
+						"table": "DimUser",
+						"cdc": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimTrack",
+						"cdc": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimDate",
+						"cdc": "date",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimArtist",
+						"cdc": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "FactStream",
+						"cdc": "stream_timestamp",
+						"from_date": ""
+					}
+				]
+			}
+		},
 		"annotations": []
 	}
 }
