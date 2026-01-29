@@ -143,6 +143,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@greater(activity('AZ_SQL_to_datalake').output.dataRead,0)",
+						"type": "Expression"
+					},
 					"ifFalseActivities": [
 						{
 							"name": "DeleteBlankFile",
