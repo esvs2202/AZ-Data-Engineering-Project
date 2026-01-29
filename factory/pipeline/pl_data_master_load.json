@@ -84,7 +84,38 @@
 		"parameters": {
 			"loop_input": {
 				"type": "array",
-				"defaultValue": "[ \t{ \t\t\"schema\":\"dbo\", \t\t\"table\":\"DimUser\", \t\t\"cdc\":\"updated_at\", \t\t\"from_date\":\"\" \t}, \t{ \t\t\"schema\":\"dbo\", \t\t\"table\":\"DimTrack\", \t\t\"cdc\":\"updated_at\", \t\t\"from_date\":\"\" \t}, \t{ \t\t\"schema\":\"dbo\", \t\t\"table\":\"DimDate\", \t\t\"cdc\":\"date\", \t\t\"from_date\":\"\" \t}, \t{ \t\t\"schema\":\"dbo\", \t\t\"table\":\"DimArtist\", \t\t\"cdc\":\"updated_at\", \t\t\"from_date\":\"\" \t}, \t{ \t\t\"schema\":\"dbo\", \t\t\"table\":\"FactStream\", \t\t\"cdc\":\"stream_timestamp\", \t\t\"from_date\":\"\" \t} ,]"
+				"defaultValue": [
+					{
+						"schema": "dbo",
+						"table": "DimUser",
+						"cdc": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimTrack",
+						"cdc": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimDate",
+						"cdc": "date",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "DimArtist",
+						"cdc": "updated_at",
+						"from_date": ""
+					},
+					{
+						"schema": "dbo",
+						"table": "FactStream",
+						"cdc": "stream_timestampa",
+						"from_date": ""
+					}
+				]
 			}
 		},
 		"annotations": []
