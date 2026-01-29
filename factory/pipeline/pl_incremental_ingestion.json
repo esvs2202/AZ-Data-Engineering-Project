@@ -194,7 +194,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_json_cdc",
+						"referenceName": "ds_json_cdc_metadata",
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
