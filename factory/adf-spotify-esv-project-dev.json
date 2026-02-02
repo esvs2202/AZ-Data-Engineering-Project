@@ -1,9 +1,0 @@
-{
-	"name": "adf-spotify-esv-project-dev",
-	"location": "eastus",
-	"identity": {
-		"type": "SystemAssigned",
-		"principalId": "49fb7ffc-f68b-441c-a029-020898b633ad",
-		"tenantId": "8c0e8f69-bc28-48f3-8aa3-662e5fc2596b"
-	}
-}
