@@ -5,7 +5,7 @@ def dimuser_stg():
     df = spark.readStream.table('spotify_catalog.silver.dimuser')
     return df
 
-dlt.create_streaming_table(name = dimuser)
+dlt.create_streaming_table(name = "dimuser")
 
 dlt.create_auto_cdc_flow(
     target = "dimuser",
