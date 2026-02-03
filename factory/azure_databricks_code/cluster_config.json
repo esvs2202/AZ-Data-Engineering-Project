@@ -1,0 +1,61 @@
+{
+    "cluster_id": "0202-080703-may67a1n",
+    "creator_user_name": "svarunachala96@outlook.com",
+    "driver_healthy": false,
+    "cluster_name": "spotify_db_cluster_01",
+    "spark_version": "16.4.x-scala2.13",
+    "spark_conf": {
+        "spark.master": "local[*, 4]",
+        "spark.databricks.cluster.profile": "singleNode"
+    },
+    "azure_attributes": {
+        "first_on_demand": 1,
+        "availability": "ON_DEMAND_AZURE",
+        "spot_bid_max_price": -1
+    },
+    "node_type_id": "Standard_D4ds_v4",
+    "driver_node_type_id": "Standard_D4ds_v4",
+    "custom_tags": {
+        "ResourceClass": "SingleNode"
+    },
+    "autotermination_minutes": 20,
+    "enable_elastic_disk": true,
+    "disk_spec": {},
+    "cluster_source": "UI",
+    "enable_local_disk_encryption": false,
+    "instance_source": {
+        "node_type_id": "Standard_D4ds_v4"
+    },
+    "driver_instance_source": {
+        "node_type_id": "Standard_D4ds_v4"
+    },
+    "data_security_mode": "USER_ISOLATION",
+    "runtime_engine": "STANDARD",
+    "effective_spark_version": "16.4.x-scala2.13",
+    "kind": "CLASSIC_PREVIEW",
+    "is_single_node": true,
+    "state": "PENDING",
+    "state_message": "Finding instances for new nodes, acquiring more instances if necessary",
+    "start_time": 1770019623597,
+    "last_state_loss_time": 0,
+    "last_activity_time": 0,
+    "last_restarted_time": 1770019623597,
+    "num_workers": 0,
+    "default_tags": {
+        "Vendor": "Databricks",
+        "Creator": "svarunachala96@outlook.com",
+        "ClusterName": "spotify_db_cluster_01",
+        "ClusterId": "0202-080703-may67a1n"
+    },
+    "init_scripts_safe_mode": false,
+    "spec": {
+        "cluster_name": "spotify_db_cluster_01",
+        "spark_version": "16.4.x-scala2.13",
+        "node_type_id": "Standard_D4ds_v4",
+        "autotermination_minutes": 20,
+        "data_security_mode": "DATA_SECURITY_MODE_AUTO",
+        "runtime_engine": "STANDARD",
+        "kind": "CLASSIC_PREVIEW",
+        "is_single_node": true
+    }
+}
