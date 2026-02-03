@@ -1,5 +1,5 @@
 !pip install jinja2
-
+from jinja2 import Template
 
 parameters = [
     {
