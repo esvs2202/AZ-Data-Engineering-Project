@@ -171,7 +171,7 @@
 									"referenceName": "ds_parquet_dynamic",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": "bronze",
+										"container": "landing",
 										"folder": {
 											"value": "@pipeline().parameters.table",
 											"type": "Expression"
