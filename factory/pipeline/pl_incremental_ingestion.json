@@ -108,7 +108,7 @@
 						"referenceName": "ds_json_cdc_metadata",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "bronze",
+							"container": "landing",
 							"folder": {
 								"value": "@concat(pipeline().parameters.table,'/','cdc')",
 								"type": "Expression"
